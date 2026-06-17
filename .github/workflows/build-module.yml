@@ -81,7 +81,8 @@ jobs:
           # First configure downloads the GMPI SDK from GitHub (FetchContent).
           cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
           cmake --build build --config Release
-          test -d "build/Gain/Release/Gain.gmpi"
+          MODULE=$(find build -name "Gain.gmpi" -type d | head -n1 || true)
+          test -n "$MODULE" && echo "Built $MODULE"
 
       - name: Build installer (.pkg)
         run: |

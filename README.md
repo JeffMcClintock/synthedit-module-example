@@ -49,7 +49,8 @@ cmake --build build --config Release
 ```
 
 You need **CMake 3.30+** and a C++20 compiler (Visual Studio 2022 on Windows, Xcode on
-macOS). The module lands at `build/Gain/Release/Gain.gmpi`. To try it, copy it into
+macOS). The module lands under `build/Gain/` (in a `Release/` subfolder with Visual Studio
+or Xcode). To try it, copy it into
 `C:\Program Files\Common Files\SynthEdit\modules` (Windows) or
 `~/Library/Audio/Plug-Ins/GMPI` (macOS) and restart SynthEdit — it appears in the **Insert**
 menu under the *Examples* category.

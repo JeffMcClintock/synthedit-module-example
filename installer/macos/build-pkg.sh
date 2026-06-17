@@ -8,7 +8,11 @@ VERSION="${1:-0.0.0}"
 VENDOR="SynthEdit Tutorial"
 IDENTIFIER="com.synthedit-tutorial.gain"
 
-MODULE="build/Gain/Release/Gain.gmpi"     # the .gmpi bundle (a folder on macOS)
+# CMake's output subfolder depends on the generator (a Release/ subfolder with Xcode or
+# Visual Studio, none with Unix Makefiles), so locate the built bundle rather than
+# hard-coding the path.
+MODULE=$(find build -name "Gain.gmpi" -type d | head -n1 || true)
+if [ -z "$MODULE" ]; then echo "error: Gain.gmpi not found under build/"; exit 1; fi
 ROOT="installer/macos/pkgroot"
 OUT="installer/macos/out"
 
