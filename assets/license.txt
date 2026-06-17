@@ -1,0 +1,8 @@
+Tutorial Gain - a SynthEdit module
+Copyright (c) 2026 SynthEdit
+
+This module is provided as a free example accompanying the SynthEdit
+"Building modules with GitHub Actions" tutorial. You may use it freely
+for any purpose. It is provided "as is", without warranty of any kind.
+
+Built with the GMPI SDK - https://github.com/JeffMcClintock/GMPI

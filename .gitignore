@@ -1,0 +1,11 @@
+# CMake build output
+build/
+
+# Installer output
+installer/windows/out/
+installer/macos/out/
+installer/macos/pkgroot/
+
+# OS cruft
+.DS_Store
+Thumbs.db
